@@ -100,7 +100,7 @@ export default function MainPage() {
               <span className="font-playfair font-black text-lg md:text-xl tracking-tight text-stone-900 dark:text-white leading-none">
                 {OWNER_CONFIG.AGENCY_NAME}
               </span>
-              <span className="text-[9px] uppercase tracking-widest text-[#8A4F35] font-extrabold font-mono mt-0.5">Estudio Web</span>
+              <span className="text-[9px] uppercase tracking-widest text-[#8A4F35] dark:text-amber-500 font-extrabold font-mono mt-0.5">Estudio Web</span>
             </div>
           </div>
 
@@ -137,14 +137,14 @@ export default function MainPage() {
         
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6 text-left relative z-10">
-            <span className="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full text-xs font-bold bg-[#8A4F35]/5 text-[#8A4F35] border border-[#8A4F35]/15 dark:border-[#8A4F35]/30">
-              <Sparkles size={12} className="text-[#8A4F35] animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full text-xs font-bold bg-[#8A4F35]/5 dark:bg-amber-500/10 text-[#8A4F35] dark:text-amber-400 border border-[#8A4F35]/15 dark:border-amber-500/25">
+              <Sparkles size={12} className="text-[#8A4F35] animate-pulse dark:text-amber-400" />
               Diseño Web a Medida para Emprendedores Universitarios
             </span>
             
             <h1 className="text-4xl md:text-6xl font-playfair font-black text-stone-900 dark:text-white tracking-tight leading-tight">
               Una web premium para tu <br />
-              <span className="text-[#8A4F35] italic">
+              <span className="text-[#8A4F35] dark:text-amber-400 italic">
                 emprendimiento
               </span>
             </h1>
@@ -241,7 +241,7 @@ export default function MainPage() {
 
               {/* QR Badge */}
               <div className="absolute -bottom-6 -right-6 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-850 text-stone-700 dark:text-stone-300 py-3.5 px-4 rounded-2xl flex items-center gap-3 shadow-xl border-l-4 border-l-[#8A4F35] transition-colors">
-                <div className="p-2 bg-[#8A4F35]/5 text-[#8A4F35] rounded-xl border border-[#8A4F35]/10">
+                <div className="p-2 bg-[#8A4F35]/5 dark:bg-amber-500/10 text-[#8A4F35] dark:text-amber-400 rounded-xl border border-[#8A4F35]/15 dark:border-amber-500/25">
                   <QrCode size={20} />
                 </div>
                 <div>
@@ -263,7 +263,7 @@ export default function MainPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             <div className="space-y-6">
-              <span className="text-xs font-extrabold uppercase text-[#8A4F35] tracking-wider font-mono">Embudo de Venta Directo</span>
+              <span className="text-xs font-extrabold uppercase text-[#8A4F35] dark:text-amber-500 tracking-wider font-mono">Embudo de Venta Directo</span>
               <h2 className="text-3.5xl md:text-5xl font-playfair font-black text-stone-900 dark:text-white tracking-tight leading-tight">
                 Instagram + Web: El combo de conversión definitivo
               </h2>
@@ -278,7 +278,7 @@ export default function MainPage() {
                   { step: "3", title: "Acción (Coordinación en tu WhatsApp)", desc: "El usuario añade lo que busca y te envía el pedido pre-armado y detallado. Solo coordinás la entrega en UBA Medicina, tu showroom o envío." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 items-start">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#8A4F35]/5 text-[#8A4F35] border border-[#8A4F35]/15 dark:border-[#8A4F35]/35 flex items-center justify-center font-bold text-xs font-mono">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#8A4F35]/5 text-[#8A4F35] border border-[#8A4F35]/15 dark:border-[#8A4F35]/35 flex items-center justify-center font-bold text-xs font-mono dark:text-amber-400 dark:bg-amber-500/10">
                       {item.step}
                     </div>
                     <div>
@@ -292,7 +292,7 @@ export default function MainPage() {
 
             {/* Simulación visual del flujo */}
             <div className="bg-[#FAF8F5] dark:bg-stone-900 p-6 md:p-10 rounded-3xl border border-stone-200/80 dark:border-stone-800 shadow-sm relative overflow-hidden flex flex-col justify-center transition-colors">
-              <h3 className="text-xs uppercase font-extrabold tracking-widest text-[#8A4F35] text-center mb-8 flex items-center justify-center gap-2 font-mono">
+              <h3 className="text-xs uppercase font-extrabold tracking-widest text-[#8A4F35] text-center mb-8 flex items-center justify-center gap-2 font-mono dark:text-amber-400">
                 <TrendingUp size={14} />
                 Flujo de Compra Automatizado
               </h3>
@@ -312,7 +312,7 @@ export default function MainPage() {
                 {/* Paso 2 */}
                 <div className="flex flex-col items-center bg-white dark:bg-stone-950 border-2 border-[#8A4F35]/40 dark:border-[#8A4F35]/65 rounded-2xl p-4 w-full md:w-36 text-center shadow-md relative transition-colors">
                   <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-[#8A4F35] text-white text-[7px] font-bold px-2 py-0.5 rounded-full">TU WEB</span>
-                  <Smartphone size={24} className="text-[#8A4F35] mb-2" />
+                  <Smartphone size={24} className="text-[#8A4F35] mb-2 dark:text-amber-400" />
                   <span className="text-xs font-bold text-stone-950 dark:text-white">Catálogo Web</span>
                   <span className="text-[9px] text-stone-500 dark:text-stone-300 mt-1 leading-tight">Consulta precios y stock</span>
                 </div>
@@ -343,14 +343,14 @@ export default function MainPage() {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <div className="lg:col-span-5 space-y-5">
-            <span className="text-xs font-bold uppercase text-[#8A4F35] tracking-wider font-mono">Simplicidad Técnica</span>
-            <h2 className="text-3xl md:text-4xl font-playfair font-black text-stone-900 tracking-tight leading-tight">
+            <span className="text-xs font-bold uppercase text-[#8A4F35] dark:text-amber-500 tracking-wider font-mono">Simplicidad Técnica</span>
+            <h2 className="text-3xl md:text-4xl font-playfair font-black text-stone-900 tracking-tight leading-tight dark:text-white">
               Actualizá precios y stock vos mismo en un minuto
             </h2>
             <p className="text-stone-550 dark:text-stone-300 text-sm md:text-base leading-relaxed">
               No necesitás pagar abonos de plataformas complejas ni saber programar. Te configuramos un archivo de datos para que cambiar un precio o pausar temporalmente un producto sin stock sea tan simple como editar un mensaje de texto.
             </p>
-            <div className="flex items-center gap-3 text-xs text-[#8A4F35] font-extrabold pt-2">
+            <div className="flex items-center gap-3 text-xs text-[#8A4F35] font-extrabold pt-2 dark:text-amber-400">
               <Code size={16} />
               <span>Código limpio, carga instantánea y libre de comisiones.</span>
             </div>
@@ -373,17 +373,17 @@ export default function MainPage() {
               
               {/* Código */}
               <div className="p-5 font-mono text-[10px] md:text-xs overflow-x-auto text-stone-300 leading-relaxed bg-stone-950/30">
-                <p className="text-stone-500">// Edición de productos rápida en tu catálogo:</p>
+                <p className="text-stone-500 dark:text-stone-300">// Edición de productos rápida en tu catálogo:</p>
                 <p><span className="text-pink-500">export const</span> <span className="text-blue-400">PRODUCTOS</span> = [</p>
                 <div className="pl-6 border-l border-stone-800 my-1">
-                  <p className="text-stone-500">&#123;</p>
+                  <p className="text-stone-500 dark:text-stone-300">&#123;</p>
                   <div className="pl-6">
                     <p>id: <span className="text-amber-300">"cookie-clasica"</span>,</p>
                     <p>name: <span className="text-amber-300">"Cookie de Chocolate Clásica"</span>,</p>
-                    <p>price: <span className="text-emerald-400 font-bold">1200</span>, <span className="text-stone-500">// &lt;-- Editás el precio acá</span></p>
-                    <p>inStock: <span className="text-pink-500">true</span>, <span className="text-stone-500">// &lt;-- true (Sí) o false (No)</span></p>
+                    <p>price: <span className="text-emerald-400 font-bold">1200</span>, <span className="text-stone-500 dark:text-stone-300">// &lt;-- Editás el precio acá</span></p>
+                    <p>inStock: <span className="text-pink-500">true</span>, <span className="text-stone-500 dark:text-stone-300">// &lt;-- true (Sí) o false (No)</span></p>
                   </div>
-                  <p className="text-stone-500">&#125;,</p>
+                  <p className="text-stone-500 dark:text-stone-300">&#125;,</p>
                 </div>
                 <p>];</p>
               </div>
@@ -396,13 +396,13 @@ export default function MainPage() {
       <section id="ferias" className="py-24 bg-white dark:bg-stone-950 border-b border-stone-200/80 dark:border-stone-900 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-bold uppercase text-[#8A4F35] tracking-wider bg-[#8A4F35]/5 px-3 py-1 rounded border border-[#8A4F35]/20 dark:border-[#8A4F35]/35">
+            <span className="text-xs font-bold uppercase text-[#8A4F35] tracking-wider bg-[#8A4F35]/5 px-3 py-1 rounded border border-[#8A4F35]/20 dark:border-[#8A4F35]/35 dark:text-amber-400 dark:bg-amber-500/10">
               Ventas Físicas y Stands
             </span>
-            <h2 className="text-3xl md:text-5xl font-playfair font-black text-stone-900 tracking-tight leading-tight">
+            <h2 className="text-3xl md:text-5xl font-playfair font-black text-stone-900 dark:text-white tracking-tight leading-tight">
               Optimizá tu puesto de Feria
             </h2>
-            <p className="text-stone-500 text-base md:text-lg">
+            <p className="text-stone-500 dark:text-stone-300 text-base md:text-lg">
               Si vendés tus productos de forma física en ferias de diseño, pasillos universitarios o showrooms, este sistema agiliza el flujo de clientes.
             </p>
           </div>
@@ -412,7 +412,7 @@ export default function MainPage() {
             {/* Tarjeta explicativa */}
             <div className="lg:col-span-5 bg-[#FAF8F5] dark:bg-stone-900 border border-stone-200 dark:border-stone-850 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm transition-colors">
               <div>
-                <div className="p-3 bg-[#8A4F35]/5 text-[#8A4F35] w-fit rounded-xl border border-[#8A4F35]/15 mb-6">
+                <div className="p-3 bg-[#8A4F35]/5 dark:bg-amber-500/10 text-[#8A4F35] dark:text-amber-400 w-fit rounded-xl border border-[#8A4F35]/15 dark:border-amber-500/25 mb-6">
                   <QrCode size={24} />
                 </div>
                 <h3 className="text-2xl font-playfair font-black text-stone-900 dark:text-white mb-4 tracking-tight">El puesto inteligente</h3>
@@ -445,7 +445,7 @@ export default function MainPage() {
               <div className="w-full max-w-md relative z-10 space-y-6">
                 <div className="bg-white dark:bg-stone-950 p-5 rounded-2xl border border-stone-200 dark:border-stone-850 flex items-center justify-between shadow-sm transition-colors">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-10 h-10 bg-stone-50 dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 flex items-center justify-center text-[#8A4F35]">
+                    <div className="w-10 h-10 bg-stone-50 dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 flex items-center justify-center text-[#8A4F35] dark:text-amber-400">
                       <QrCode size={20} />
                     </div>
                     <div>
@@ -456,11 +456,11 @@ export default function MainPage() {
                   <span className="text-[9px] bg-emerald-500/10 text-emerald-800 px-2 py-0.5 rounded border border-emerald-500/25 font-bold uppercase">Escaneo</span>
                 </div>
 
-                <div className="w-0.5 h-6 bg-[#8A4F35]/40 mx-auto"></div>
+                <div className="w-0.5 h-6 bg-[#8A4F35]/40 dark:bg-amber-500/30 mx-auto"></div>
 
                 <div className="bg-white dark:bg-stone-950 p-5 rounded-2xl border border-stone-200 dark:border-stone-850 flex items-center justify-between shadow-sm transition-colors">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-stone-50 dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 flex items-center justify-center text-[#8A4F35]">
+                    <div className="w-10 h-10 bg-stone-50 dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 flex items-center justify-center text-[#8A4F35] dark:text-amber-400">
                       <Smartphone size={20} />
                     </div>
                     <div>
@@ -471,7 +471,7 @@ export default function MainPage() {
                   <span className="text-[9px] bg-amber-500/10 text-amber-800 px-2 py-0.5 rounded border border-amber-500/25 font-bold uppercase">Navegación</span>
                 </div>
 
-                <div className="w-0.5 h-6 bg-[#8A4F35]/40 mx-auto"></div>
+                <div className="w-0.5 h-6 bg-[#8A4F35]/40 dark:bg-amber-500/30 mx-auto"></div>
 
                 <div className="bg-white p-5 rounded-2xl border border-stone-200 flex items-center justify-between shadow-sm">
                   <div className="flex items-center gap-3">
@@ -495,11 +495,11 @@ export default function MainPage() {
       <section id="beneficios" className="py-24 bg-[#FAF8F5] dark:bg-stone-900 border-b border-stone-200/80 dark:border-stone-855 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-bold uppercase text-[#8A4F35] tracking-wider font-mono">Detalles del Servicio</span>
-            <h2 className="text-3xl md:text-5xl font-playfair font-black text-stone-900 tracking-tight leading-tight">
+            <span className="text-xs font-bold uppercase text-[#8A4F35] dark:text-amber-500 tracking-wider font-mono">Detalles del Servicio</span>
+            <h2 className="text-3xl md:text-5xl font-playfair font-black text-stone-900 dark:text-white tracking-tight leading-tight">
               ¿Qué incluye tu página web?
             </h2>
-            <p className="text-stone-500 text-base md:text-lg">
+            <p className="text-stone-500 dark:text-stone-300 text-base md:text-lg">
               Diseño profesional, veloz y optimizado para la realidad de los emprendedores en Argentina.
             </p>
           </div>
@@ -519,7 +519,7 @@ export default function MainPage() {
               const Icon = benefit.icon;
               return (
                 <div key={i} className="bg-white dark:bg-stone-950 p-6 rounded-2xl border border-stone-200 dark:border-stone-850 hover:border-stone-300 dark:hover:border-stone-750 transition-colors shadow-sm">
-                  <div className="p-2.5 bg-[#8A4F35]/5 text-[#8A4F35] w-fit rounded-xl border border-[#8A4F35]/15 dark:border-[#8A4F35]/30 mb-4 shadow-inner">
+                  <div className="p-2.5 bg-[#8A4F35]/5 text-[#8A4F35] w-fit rounded-xl border border-[#8A4F35]/15 dark:border-[#8A4F35]/30 mb-4 shadow-inner dark:text-amber-400 dark:bg-amber-500/10">
                     <Icon size={20} />
                   </div>
                   <h4 className="text-stone-900 dark:text-white font-bold text-sm md:text-base mb-2 font-playfair">{benefit.title}</h4>
@@ -535,11 +535,11 @@ export default function MainPage() {
       <section id="funcionamiento" className="py-24 bg-white dark:bg-stone-950 border-b border-stone-200/80 dark:border-stone-900 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-bold uppercase text-[#8A4F35] tracking-wider font-mono">Paso a Paso</span>
-            <h2 className="text-3xl md:text-5xl font-playfair font-black text-stone-900 tracking-tight leading-tight">
+            <span className="text-xs font-bold uppercase text-[#8A4F35] dark:text-amber-500 tracking-wider font-mono">Paso a Paso</span>
+            <h2 className="text-3xl md:text-5xl font-playfair font-black text-stone-900 dark:text-white tracking-tight leading-tight">
               El proceso de trabajo
             </h2>
-            <p className="text-stone-500 text-base md:text-lg">
+            <p className="text-stone-500 dark:text-stone-300 text-base md:text-lg">
               Simple y ágil. Tu página web estará online y lista para vender en pocos días.
             </p>
           </div>
@@ -553,9 +553,9 @@ export default function MainPage() {
               { step: "Fase 5", title: "Soporte y Actualizaciones", text: "Te entregamos un instructivo muy simple para que cambies los precios vos mismo en un minuto. Además, ofrecemos soporte opcional." }
             ].map((item, i) => (
               <div key={i} className="relative">
-                <div className="absolute -left-[31px] md:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#8A4F35] border-4 border-white dark:border-stone-955 shadow-md"></div>
+                <div className="absolute -left-[31px] md:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#8A4F35] dark:bg-amber-500 border-4 border-white dark:border-stone-955 shadow-md"></div>
                 <div>
-                  <span className="text-xs font-bold text-[#8A4F35] tracking-wider uppercase font-mono">{item.step}</span>
+                  <span className="text-xs font-bold text-[#8A4F35] dark:text-amber-400 dark:text-amber-400 tracking-wider uppercase font-mono">{item.step}</span>
                   <h3 className="text-lg md:text-xl font-bold text-stone-900 dark:text-white mt-1 mb-2 font-playfair">{item.title}</h3>
                   <p className="text-stone-500 dark:text-stone-300 text-xs md:text-sm leading-relaxed">{item.text}</p>
                 </div>
@@ -569,11 +569,11 @@ export default function MainPage() {
       <section id="precios" className="py-24 bg-[#FAF8F5] dark:bg-stone-900 border-b border-stone-200/80 dark:border-stone-850 relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-bold uppercase text-[#8A4F35] tracking-wider font-mono">Presupuestos Claros</span>
-            <h2 className="text-3xl md:text-5xl font-playfair font-black text-stone-900 tracking-tight leading-tight">
+            <span className="text-xs font-bold uppercase text-[#8A4F35] dark:text-amber-500 tracking-wider font-mono">Presupuestos Claros</span>
+            <h2 className="text-3xl md:text-5xl font-playfair font-black text-stone-900 dark:text-white tracking-tight leading-tight">
               Precios pensados para crecer
             </h2>
-            <p className="text-stone-500 text-base md:text-lg">
+            <p className="text-stone-500 dark:text-stone-300 text-base md:text-lg">
               Inversión en pago único. Sin cargos fijos mensuales ni retenciones por tus ventas.
             </p>
           </div>
@@ -606,7 +606,7 @@ export default function MainPage() {
                     </div>
                     <div>
                       <span className="text-[9px] text-[#8A4F35] dark:text-amber-500 block font-mono uppercase tracking-wider">Abono mensual</span>
-                      <span className="text-xs font-bold text-[#8A4F35] dark:text-amber-550 font-mono">{plan.monthlyPrice}</span>
+                      <span className="text-xs font-bold text-[#8A4F35] dark:text-amber-400 dark:text-amber-400 font-mono">{plan.monthlyPrice}</span>
                     </div>
                   </div>
 
@@ -615,7 +615,7 @@ export default function MainPage() {
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-2 text-[11px] text-stone-600 dark:text-stone-300 leading-snug">
-                        <Check size={14} className="text-[#8A4F35] dark:text-amber-550 flex-shrink-0 mt-0.5" />
+                        <Check size={14} className="text-[#8A4F35] dark:text-amber-400 flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -650,7 +650,7 @@ export default function MainPage() {
             <h3 className="text-base font-bold text-stone-900 dark:text-white mb-6 font-playfair text-center">Resumen de Planes y Tarifas</h3>
             <table className="w-full text-left text-xs md:text-sm border-collapse">
               <thead>
-                <tr className="border-b border-stone-250/60 dark:border-stone-800 text-stone-500 dark:text-stone-300 font-mono text-[9px] uppercase tracking-wider">
+                <tr className="border-b border-stone-250/60 dark:border-stone-800 text-stone-500 dark:text-stone-200 font-mono text-[9px] uppercase tracking-wider">
                   <th className="py-3 px-4 font-bold">Plan</th>
                   <th className="py-3 px-4 text-right font-bold">Puesta en marcha</th>
                   <th className="py-3 px-4 text-right font-bold">Mensual</th>
@@ -670,10 +670,10 @@ export default function MainPage() {
                   <td className="py-4 px-4 text-right font-mono">$12.000 – $20.000</td>
                   <td className="py-4 px-4 text-xs text-stone-550 dark:text-stone-300 leading-relaxed">Catálogo completo, categorías, productos, precios, disponibilidad; vos hacés los cambios.</td>
                 </tr>
-                <tr className="hover:bg-stone-50/50 bg-[#8A4F35]/5 dark:bg-[#8A4F35]/10 dark:hover:bg-[#8A4F35]/15 transition-colors">
-                  <td className="py-4 px-4 font-bold text-[#8A4F35]">Catálogo Full</td>
-                  <td className="py-4 px-4 text-right font-mono font-bold text-[#8A4F35]">$190.000 – $280.000</td>
-                  <td className="py-4 px-4 text-right font-mono font-bold text-[#8A4F35]">$18.000 – $30.000</td>
+                <tr className="hover:bg-stone-50/50 bg-[#8A4F35]/5 dark:bg-amber-500/10 dark:hover:bg-amber-950/30 transition-colors">
+                  <td className="py-4 px-4 font-bold text-[#8A4F35] dark:text-amber-400">Catálogo Full</td>
+                  <td className="py-4 px-4 text-right font-mono font-bold text-[#8A4F35] dark:text-amber-400">$190.000 – $280.000</td>
+                  <td className="py-4 px-4 text-right font-mono font-bold text-[#8A4F35] dark:text-amber-400">$18.000 – $30.000</td>
                   <td className="py-4 px-4 text-xs text-stone-700 dark:text-stone-250 leading-relaxed font-semibold">Panel admin, alta/edición de productos, precios, stock, destacados e imágenes.</td>
                 </tr>
                 <tr className="hover:bg-stone-50/50 transition-colors">
@@ -695,8 +695,8 @@ export default function MainPage() {
             {/* Texto CTA */}
             <div className="lg:col-span-5 flex flex-col justify-between py-2">
               <div className="space-y-5">
-                <span className="text-xs font-bold uppercase text-[#8A4F35] tracking-wider font-mono">¿Hacemos tu catálogo?</span>
-                <h2 className="text-3xl md:text-5xl font-playfair font-black text-stone-900 tracking-tight leading-tight">
+                <span className="text-xs font-bold uppercase text-[#8A4F35] dark:text-amber-500 tracking-wider font-mono">¿Hacemos tu catálogo?</span>
+                <h2 className="text-3xl md:text-5xl font-playfair font-black text-stone-900 dark:text-white tracking-tight leading-tight">
                   Solicitá tu presupuesto
                 </h2>
                 <p className="text-stone-500 dark:text-stone-300 text-sm md:text-base leading-relaxed">
@@ -720,7 +720,7 @@ export default function MainPage() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-[#8A4F35]/5 text-[#8A4F35] rounded-lg border border-[#8A4F35]/15">
+                  <div className="p-2.5 bg-[#8A4F35]/5 dark:bg-amber-500/10 text-[#8A4F35] dark:text-amber-400 rounded-lg border border-[#8A4F35]/15 dark:border-amber-500/25">
                     <FileText size={16} />
                   </div>
                   <div>
@@ -753,7 +753,7 @@ export default function MainPage() {
           </div>
 
           <div>
-            <span className="text-stone-500">© 2026 {OWNER_CONFIG.AGENCY_NAME}. Todos los derechos reservados.</span>
+            <span className="text-stone-500 dark:text-stone-300">© 2026 {OWNER_CONFIG.AGENCY_NAME}. Todos los derechos reservados.</span>
           </div>
         </div>
       </footer>

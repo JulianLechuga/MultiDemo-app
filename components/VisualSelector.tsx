@@ -159,10 +159,10 @@ export default function VisualSelector() {
       accentBorder: "border-stone-500/20",
       accentBg: "bg-stone-500/5",
       mockup: (
-        <div className="w-full h-full bg-[#faf9f6] text-stone-900 flex flex-col p-4 font-montserrat select-none">
+        <div className="w-full h-full bg-[#faf9f6] text-stone-900 flex flex-col p-4 font-montserrat select-none dark:text-white">
           {/* Cabecera del celular */}
           <div className="text-center border-b border-stone-200 pb-2.5 mb-3">
-            <span className="font-cormorant font-bold text-sm uppercase tracking-widest text-stone-900">💍 Accesorios</span>
+            <span className="font-cormorant font-bold text-sm uppercase tracking-widest text-stone-900 dark:text-white">💍 Accesorios</span>
           </div>
 
           {/* Catálogo en cuadricula */}
@@ -173,16 +173,16 @@ export default function VisualSelector() {
                   <div className="w-1.5 h-1.5 bg-sky-100 rounded-full absolute -top-1 border border-amber-400"></div>
                 </div>
               </div>
-              <h4 className="font-bold text-[9px] text-stone-850 uppercase tracking-tight line-clamp-1">Anillo Aurum</h4>
-              <span className="text-[8px] text-stone-500 font-mono mt-0.5">$7.800</span>
+              <h4 className="font-bold text-[9px] text-stone-850 uppercase tracking-tight line-clamp-1 dark:text-white">Anillo Aurum</h4>
+              <span className="text-[8px] text-stone-500 font-mono mt-0.5 dark:text-stone-300">$7.800</span>
             </div>
 
             <div className="bg-white rounded-lg p-2.5 border border-stone-200 shadow-sm flex flex-col justify-between text-center">
               <div className="w-full aspect-square bg-stone-950 rounded flex items-center justify-center mb-2">
                 <div className="w-8 h-8 rounded-full border-2 border-stone-400 border-dashed relative animate-spin-slow"></div>
               </div>
-              <h4 className="font-bold text-[9px] text-stone-850 uppercase tracking-tight line-clamp-1">Aros Luna</h4>
-              <span className="text-[8px] text-stone-500 font-mono mt-0.5">$4.500</span>
+              <h4 className="font-bold text-[9px] text-stone-850 uppercase tracking-tight line-clamp-1 dark:text-white">Aros Luna</h4>
+              <span className="text-[8px] text-stone-500 font-mono mt-0.5 dark:text-stone-300">$4.500</span>
             </div>
           </div>
 
@@ -242,7 +242,7 @@ export default function VisualSelector() {
         
         {/* Encabezado de la Sección */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs uppercase tracking-widest text-[#8A4F35] font-extrabold bg-[#8A4F35]/5 px-4 py-1.5 rounded-full border border-[#8A4F35]/15 dark:border-[#8A4F35]/30">
+          <span className="text-xs uppercase tracking-widest text-[#8A4F35] dark:text-amber-500 font-extrabold bg-[#8A4F35]/5 dark:bg-amber-500/10 px-4 py-1.5 rounded-full border border-[#8A4F35]/15 dark:border-amber-500/25">
             Demos del Catálogo
           </span>
           <h2 className="text-4xl md:text-5xl font-playfair font-black text-stone-900 dark:text-white tracking-tight leading-tight">
@@ -284,9 +284,9 @@ export default function VisualSelector() {
           <div className="lg:col-span-7 space-y-6">
             <div className="flex items-center gap-2">
               <div className={`p-2 rounded-xl ${activeDetails.accentBg} ${activeDetails.accentBorder} border`}>
-                <ActiveIcon size={22} className="text-[#8A4F35]" />
+                <ActiveIcon size={22} className="text-[#8A4F35] dark:text-amber-400" />
               </div>
-              <span className="text-xs uppercase font-extrabold tracking-wider text-[#8A4F35] font-mono">
+              <span className="text-xs uppercase font-extrabold tracking-wider text-[#8A4F35] dark:text-amber-400 font-mono">
                 {activeBrand.category}
               </span>
             </div>
