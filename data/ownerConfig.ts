@@ -22,54 +22,70 @@ export const OWNER_CONFIG = {
   // Ubicación principal donde ofrecés tus servicios
   LOCATION: "Buenos Aires, Argentina",
 
-  // Planes y precios ajustados para Argentina (Agosto 2026)
+  // Planes y precios actualizados para Argentina (Agosto 2026)
   PLANES: [
     {
-      id: "landing",
-      name: "Página Express / QR",
-      price: "95.000", // Precio razonable en pesos argentinos para Agosto 2026
-      period: "pago único",
-      description: "La solución rápida y económica. Ideal para stands en ferias universitarias que necesitan mostrar stock digital en el acto.",
+      id: "express",
+      name: "Express",
+      setupPrice: "$60.000 – $90.000",
+      monthlyPrice: "$5.000 – $8.000",
+      description: "Landing simple para ferias con código QR, redirección a WhatsApp y vinculación de Instagram.",
       features: [
-        "Diseño adaptable y optimizado para pantallas de celulares",
-        "Catálogo digital de hasta 15 productos con fotos y descripciones",
-        "Botón directo de consulta a tu WhatsApp (abre chat con plantilla de pedido)",
-        "Código QR personalizado en PDF listo para imprimir en tu stand",
-        "Hosting y subdominio bonificado por el primer año",
-        "Panel de administración básico para actualizar stock y precios"
+        "Landing page de sección única optimizada para celulares",
+        "Botón directo de redirección a tu WhatsApp",
+        "Enlace integrado a tu perfil de Instagram",
+        "Exhibición de datos del emprendimiento y ubicación",
+        "Sección destacada de hasta 5 productos recomendados",
+        "Código QR personalizado en PDF listo para colgar en tu stand"
       ],
       recommended: false
     },
     {
       id: "catalogo",
-      name: "Catálogo Emprendedor",
-      price: "160.000", // Precio razonable para un catálogo avanzado
-      period: "pago único",
-      description: "El preferido para marcas de indumentaria, pastelerías o accesorios que buscan convertir seguidores de Instagram en clientes.",
+      name: "Catálogo",
+      setupPrice: "$110.000 – $160.000",
+      monthlyPrice: "$12.000 – $20.000",
+      description: "Ideal si buscás un catálogo digital completo con categorías, buscador y control de stock manual en código.",
       features: [
-        "Todo lo incluido en el plan Express / QR",
-        "Páginas de detalle individuales para cada producto (ideal para compartir por DM)",
-        "Filtros de búsqueda avanzados (talles, colores y rubros específicos)",
-        "Catálogo ampliado de hasta 40 productos",
-        "Buscador predictivo de productos en la cabecera",
-        "Sección destacada de combos y promociones semanales",
-        "Optimización de velocidad de carga (Lighthouse > 95)"
+        "Todo lo incluido en el plan Express",
+        "Catálogo completo con categorías auto-filtrables",
+        "Páginas de detalles individuales para cada producto",
+        "Buscador reactivo de productos integrado",
+        "Indicador visual de precios, detalles y disponibilidad de stock",
+        "Vos hacés los cambios directamente editando archivos de texto simples"
+      ],
+      recommended: false
+    },
+    {
+      id: "catalogo-full",
+      name: "Catálogo Full",
+      setupPrice: "$190.000 – $280.000",
+      monthlyPrice: "$18.000 – $30.000",
+      description: "Panel autoadministrable completo. Subí fotos, cambiá precios, destacá artículos y controlá el stock desde tu celular.",
+      features: [
+        "Todo lo incluido en el plan Catálogo",
+        "Panel administrador privado protegido para tu negocio",
+        "Dashboard con métricas básicas (disponibles, agotados, destacados)",
+        "Crear, editar y eliminar productos mediante formularios simples",
+        "Cambio rápido de precios en un segundo y control de stock táctil",
+        "Gestión de imágenes locales o enlaces Supabase Storage",
+        "Soporte técnico prioritario por WhatsApp"
       ],
       recommended: true
     },
     {
-      id: "premium",
-      name: "Web Pro a Medida",
-      price: "250.000", // Precio razonable para desarrollos a medida en 2026
-      period: "pago único",
-      description: "Para proyectos con requerimientos especiales como cotizadores interactivos de impresión 3D o integraciones de catálogo complejas.",
+      id: "ecommerce",
+      name: "E-commerce",
+      setupPrice: "desde $350.000",
+      monthlyPrice: "desde $30.000",
+      description: "Tienda online avanzada con carrito de compras, automatización de cobros e integraciones.",
       features: [
-        "Todo lo incluido en el plan Catálogo Emprendedor",
-        "Formularios de cotización de archivos y medidas personalizadas",
-        "Apartado de portafolio y galería de trabajos previos en alta definición",
-        "Integración de calendario interactivo de ferias y mapa de stands",
-        "Configuración de SEO local avanzado para aparecer en búsquedas de Google Buenos Aires",
-        "Soporte prioritario por WhatsApp y mantenimiento mensual bonificado"
+        "Todo lo incluido en el plan Catálogo Full",
+        "Carrito de compras interactivo con suma de totales",
+        "Integración de pasarela de pagos (Mercado Pago, tarjetas)",
+        "Registro y panel de usuarios / historial de compras",
+        "Integración de envíos (Correo Argentino, Andreani, etc.)",
+        "Panel de analíticas avanzado de ventas y facturación"
       ],
       recommended: false
     }

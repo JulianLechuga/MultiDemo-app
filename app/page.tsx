@@ -537,11 +537,11 @@ export default function MainPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch">
             {OWNER_CONFIG.PLANES.map((plan) => (
               <div 
                 key={plan.id}
-                className={`rounded-3xl p-6 md:p-8 flex flex-col justify-between border transition-all duration-300 ${
+                className={`rounded-3xl p-5 md:p-6.5 flex flex-col justify-between border transition-all duration-300 ${
                   plan.recommended 
                     ? "bg-white border-[#8A4F35]/65 shadow-[0_15px_40px_-5px_rgba(44,37,32,0.06)] relative -translate-y-2 lg:-translate-y-4" 
                     : "bg-white/50 border-stone-200"
@@ -554,21 +554,27 @@ export default function MainPage() {
                 )}
 
                 <div>
-                  <h3 className="text-xl font-bold text-stone-900 mb-2 font-playfair">{plan.name}</h3>
-                  <p className="text-stone-500 text-xs md:text-sm mb-6 leading-relaxed min-h-[48px]">{plan.description}</p>
+                  <h3 className="text-lg font-bold text-stone-900 mb-2 font-playfair">{plan.name}</h3>
+                  <p className="text-stone-500 text-xs mb-5 leading-relaxed min-h-[48px]">{plan.description}</p>
                   
-                  <div className="flex items-baseline gap-1.5 mb-6">
-                    <span className="text-lg font-bold text-stone-400 font-mono">$</span>
-                    <span className="text-3xl md:text-4xl font-extrabold text-stone-900 tracking-tight font-mono">{plan.price}</span>
-                    <span className="text-xs text-stone-400 font-medium">ARS / {plan.period}</span>
+                  {/* Puesta en marcha y abono */}
+                  <div className="space-y-2 mb-5.5 bg-stone-50/50 p-3 rounded-xl border border-stone-100">
+                    <div>
+                      <span className="text-[9px] text-stone-400 block font-mono uppercase tracking-wider">Puesta en marcha</span>
+                      <span className="text-base font-extrabold text-stone-800 font-mono">{plan.setupPrice}</span>
+                    </div>
+                    <div>
+                      <span className="text-[9px] text-[#8A4F35] block font-mono uppercase tracking-wider">Abono mensual</span>
+                      <span className="text-xs font-bold text-[#8A4F35] font-mono">{plan.monthlyPrice}</span>
+                    </div>
                   </div>
 
-                  <hr className="border-stone-100 mb-6" />
+                  <hr className="border-stone-100 mb-4" />
 
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2.5 text-xs md:text-sm text-stone-600 leading-normal">
-                        <Check size={16} className="text-[#8A4F35] flex-shrink-0 mt-0.5" />
+                      <li key={fIdx} className="flex items-start gap-2 text-[11px] text-stone-600 leading-snug">
+                        <Check size={14} className="text-[#8A4F35] flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -580,12 +586,13 @@ export default function MainPage() {
                     handleScrollTo("contacto");
                     const rubroSelect = document.getElementById("rubro") as HTMLSelectElement;
                     if (rubroSelect) {
-                      if (plan.id === "landing") rubroSelect.value = "comida";
+                      if (plan.id === "express") rubroSelect.value = "comida";
                       else if (plan.id === "catalogo") rubroSelect.value = "indumentaria";
-                      else if (plan.id === "premium") rubroSelect.value = "personalizados";
+                      else if (plan.id === "catalogo-full") rubroSelect.value = "personalizados";
+                      else if (plan.id === "ecommerce") rubroSelect.value = "otro";
                     }
                   }}
-                  className={`w-full text-center py-3.5 rounded-xl font-bold transition duration-200 text-xs md:text-sm cursor-pointer ${
+                  className={`w-full text-center py-2.5 rounded-xl font-bold transition duration-200 text-xs cursor-pointer ${
                     plan.recommended
                       ? "bg-[#8A4F35] hover:bg-[#72402B] text-white shadow-md shadow-amber-900/10"
                       : "bg-stone-50 hover:bg-stone-100 text-stone-700 border border-stone-200"
@@ -595,6 +602,47 @@ export default function MainPage() {
                 </button>
               </div>
             ))}
+          </div>
+
+          {/* Tabla Comparativa de Tarifas */}
+          <div className="mt-16 overflow-x-auto max-w-5xl mx-auto bg-white border border-stone-200 rounded-3xl p-6 md:p-8 shadow-sm">
+            <h3 className="text-base font-bold text-stone-900 mb-6 font-playfair text-center">Resumen de Planes y Tarifas</h3>
+            <table className="w-full text-left text-xs md:text-sm border-collapse">
+              <thead>
+                <tr className="border-b border-stone-250/60 text-stone-500 font-mono text-[9px] uppercase tracking-wider">
+                  <th className="py-3 px-4 font-bold">Plan</th>
+                  <th className="py-3 px-4 text-right font-bold">Puesta en marcha</th>
+                  <th className="py-3 px-4 text-right font-bold">Mensual</th>
+                  <th className="py-3 px-4 font-bold">Qué incluye</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-stone-100 text-stone-600">
+                <tr className="hover:bg-stone-50/50 transition-colors">
+                  <td className="py-4 px-4 font-bold text-stone-900">Express</td>
+                  <td className="py-4 px-4 text-right font-mono">$60.000 – $90.000</td>
+                  <td className="py-4 px-4 text-right font-mono">$5.000 – $8.000</td>
+                  <td className="py-4 px-4 text-xs text-stone-550 leading-relaxed">Landing simple, WhatsApp, Instagram, datos del emprendimiento, productos destacados.</td>
+                </tr>
+                <tr className="hover:bg-stone-50/50 transition-colors">
+                  <td className="py-4 px-4 font-bold text-stone-900">Catálogo</td>
+                  <td className="py-4 px-4 text-right font-mono">$110.000 – $160.000</td>
+                  <td className="py-4 px-4 text-right font-mono">$12.000 – $20.000</td>
+                  <td className="py-4 px-4 text-xs text-stone-550 leading-relaxed">Catálogo completo, categorías, productos, precios, disponibilidad; vos hacés los cambios.</td>
+                </tr>
+                <tr className="hover:bg-stone-50/50 bg-[#8A4F35]/5 transition-colors">
+                  <td className="py-4 px-4 font-bold text-[#8A4F35]">Catálogo Full</td>
+                  <td className="py-4 px-4 text-right font-mono font-bold text-[#8A4F35]">$190.000 – $280.000</td>
+                  <td className="py-4 px-4 text-right font-mono font-bold text-[#8A4F35]">$18.000 – $30.000</td>
+                  <td className="py-4 px-4 text-xs text-stone-700 leading-relaxed font-semibold">Panel admin, alta/edición de productos, precios, stock, destacados e imágenes.</td>
+                </tr>
+                <tr className="hover:bg-stone-50/50 transition-colors">
+                  <td className="py-4 px-4 font-bold text-stone-900">E-commerce</td>
+                  <td className="py-4 px-4 text-right font-mono">desde $350.000</td>
+                  <td className="py-4 px-4 text-right font-mono">desde $30.000</td>
+                  <td className="py-4 px-4 text-xs text-stone-550 leading-relaxed">Carrito, pedidos, pagos, usuarios, integraciones.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
