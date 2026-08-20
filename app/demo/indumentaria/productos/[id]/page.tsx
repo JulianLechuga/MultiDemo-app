@@ -1,0 +1,17 @@
+import { CLOTHING_PRODUCTS } from "@/data/clothingProducts";
+import ProductClient from "./ProductClient";
+
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
+
+export async function generateStaticParams() {
+  return CLOTHING_PRODUCTS.map((product) => ({
+    id: product.id,
+  }));
+}
+
+export default async function Page({ params }: PageProps) {
+  const resolvedParams = await params;
+  return <ProductClient id={resolvedParams.id} />;
+}
