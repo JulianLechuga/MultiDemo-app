@@ -234,7 +234,7 @@ export default function VisualSelector() {
   const ActiveIcon = activeDetails.icon;
 
   return (
-    <section id="demos" className="py-28 bg-[#FAF8F5] relative overflow-hidden border-t border-stone-200/80">
+    <section id="demos" className="py-28 bg-[#FAF8F5] dark:bg-stone-900 relative overflow-hidden border-t border-stone-200/80 dark:border-stone-850 transition-colors duration-300">
       {/* Elemento decorativo cálido */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -242,13 +242,13 @@ export default function VisualSelector() {
         
         {/* Encabezado de la Sección */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs uppercase tracking-widest text-[#8A4F35] font-extrabold bg-[#8A4F35]/5 px-4 py-1.5 rounded-full border border-[#8A4F35]/15">
+          <span className="text-xs uppercase tracking-widest text-[#8A4F35] font-extrabold bg-[#8A4F35]/5 px-4 py-1.5 rounded-full border border-[#8A4F35]/15 dark:border-[#8A4F35]/30">
             Demos del Catálogo
           </span>
-          <h2 className="text-4xl md:text-5xl font-playfair font-black text-stone-900 tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl font-playfair font-black text-stone-900 dark:text-white tracking-tight leading-tight">
             Elegí el estilo ideal para tu rubro
           </h2>
-          <p className="text-stone-500 text-base md:text-lg font-sans leading-relaxed">
+          <p className="text-stone-500 dark:text-stone-400 text-base md:text-lg font-sans leading-relaxed">
             Hacé clic en los botones para alternar entre las diferentes plantillas. Cada demo es totalmente funcional, adaptable a celulares y optimizada para el mercado argentino.
           </p>
         </div>
@@ -267,7 +267,7 @@ export default function VisualSelector() {
                 className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs uppercase tracking-wider font-extrabold transition-all duration-200 cursor-pointer border ${
                   isSelected
                     ? "bg-[#8A4F35] text-white border-[#8A4F35] shadow-[0_6px_15px_rgba(138,79,53,0.2)] scale-102"
-                    : "bg-white text-stone-600 border-stone-200 hover:bg-stone-50 hover:text-stone-900 shadow-sm"
+                    : "bg-white dark:bg-stone-950 text-stone-600 dark:text-stone-300 border-stone-200 dark:border-stone-850 hover:bg-stone-50 hover:text-stone-900 dark:hover:text-white shadow-sm"
                 }`}
               >
                 <TabIcon size={16} />
@@ -278,7 +278,7 @@ export default function VisualSelector() {
         </div>
 
         {/* 2. AREA DE PRESENTACIÓN - SPLIT LAYOUT GIGANTE */}
-        <div className="bg-white border border-stone-200/80 rounded-[32px] p-6 md:p-12 shadow-[0_15px_50px_-20px_rgba(44,37,32,0.06)] grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="bg-white dark:bg-stone-950 border border-stone-200/80 dark:border-stone-850 rounded-[32px] p-6 md:p-12 shadow-[0_15px_50px_-20px_rgba(44,37,32,0.06)] dark:shadow-none grid grid-cols-1 lg:grid-cols-12 gap-12 items-center transition-colors">
           
           {/* Columna de Texto - Izquierda */}
           <div className="lg:col-span-7 space-y-6">
@@ -291,20 +291,20 @@ export default function VisualSelector() {
               </span>
             </div>
 
-            <h3 className="text-2xl md:text-3.5xl font-playfair font-black text-stone-900 tracking-tight leading-tight">
+            <h3 className="text-2xl md:text-3.5xl font-playfair font-black text-stone-900 dark:text-white tracking-tight leading-tight">
               {activeDetails.title}
             </h3>
 
-            <p className="text-stone-500 text-sm md:text-base leading-relaxed">
+            <p className="text-stone-500 dark:text-stone-400 text-sm md:text-base leading-relaxed">
               {activeDetails.description}
             </p>
 
             {/* Beneficios Específicos */}
-            <div className="border-y border-stone-100 py-6 my-2">
-              <h4 className="text-stone-850 font-bold text-xs uppercase tracking-wider mb-4">Detalles destacados de la plantilla:</h4>
+            <div className="border-y border-stone-100 dark:border-stone-900 py-6 my-2">
+              <h4 className="text-stone-855 dark:text-stone-200 font-bold text-xs uppercase tracking-wider mb-4">Detalles destacados de la plantilla:</h4>
               <ul className="space-y-3.5">
                 {activeDetails.highlights.map((highlight, index) => (
-                  <li key={index} className="flex items-start gap-3 text-xs md:text-sm text-stone-600 leading-normal">
+                  <li key={index} className="flex items-start gap-3 text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-normal">
                     <Check size={18} className="text-emerald-600 flex-shrink-0 mt-0.5" />
                     <span>{highlight}</span>
                   </li>
@@ -313,16 +313,16 @@ export default function VisualSelector() {
             </div>
 
             {/* Ficha de Diseño de la Demo */}
-            <div className="flex flex-wrap items-center gap-6 text-xs text-stone-500 pt-2">
+            <div className="flex flex-wrap items-center gap-6 text-xs text-stone-500 dark:text-stone-400 pt-2">
               <div>
-                <span className="text-stone-400 block font-mono text-[9px] uppercase tracking-wider mb-1">Tipografía Base</span>
-                <span className="font-bold text-stone-700">{activeDetails.typography}</span>
+                <span className="text-stone-400 dark:text-stone-500 block font-mono text-[9px] uppercase tracking-wider mb-1">Tipografía Base</span>
+                <span className="font-bold text-stone-700 dark:text-stone-300">{activeDetails.typography}</span>
               </div>
               <div>
-                <span className="text-stone-400 block font-mono text-[9px] uppercase tracking-wider mb-1">Paleta de Colores</span>
+                <span className="text-stone-400 dark:text-stone-500 block font-mono text-[9px] uppercase tracking-wider mb-1">Paleta de Colores</span>
                 <div className="flex gap-1.5 mt-0.5">
                   {activeDetails.colors.map((c, i) => (
-                    <span key={i} className="w-4 h-4 rounded-full border border-stone-200 block" style={{ backgroundColor: c }} title={c}></span>
+                    <span key={i} className="w-4 h-4 rounded-full border border-stone-200 dark:border-stone-850 block" style={{ backgroundColor: c }} title={c}></span>
                   ))}
                 </div>
               </div>
@@ -339,7 +339,7 @@ export default function VisualSelector() {
               </Link>
               <a
                 href="#contacto"
-                className="bg-stone-50 hover:bg-stone-100 text-stone-800 font-bold py-3.5 px-6 rounded-xl border border-stone-200 transition duration-200 text-sm text-center flex-grow sm:flex-grow-0"
+                className="bg-stone-50 dark:bg-stone-900 hover:bg-stone-100 dark:hover:bg-stone-850 text-stone-800 dark:text-stone-300 font-bold py-3.5 px-6 rounded-xl border border-stone-200 dark:border-stone-800 transition duration-200 text-sm text-center flex-grow sm:flex-grow-0"
               >
                 Quiero una Web así
               </a>

@@ -275,6 +275,13 @@ export default function ComidaAdminPage() {
           >
             Entrar como Administrador DEMO
           </button>
+
+          <Link
+            href="/demo/comida"
+            className="w-full bg-slate-900 hover:bg-slate-850 border border-slate-800 text-slate-300 font-bold py-3.5 px-4 rounded-xl transition block text-sm cursor-pointer"
+          >
+            ← Volver a la Tienda (Vista Cliente)
+          </Link>
         </div>
       </div>
     );

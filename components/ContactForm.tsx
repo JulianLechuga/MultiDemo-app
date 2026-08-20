@@ -11,7 +11,7 @@ function ContactFormContent() {
     nombre: "",
     emprendimiento: "",
     instagram: "",
-    rubro: "otro",
+    rubro: "comida",
     mensaje: "",
   });
 
@@ -73,17 +73,17 @@ function ContactFormContent() {
 
   if (isSuccess) {
     return (
-      <div className="bg-slate-900 border border-emerald-500/30 rounded-2xl p-8 text-center flex flex-col items-center justify-center min-h-[400px]">
+      <div className="bg-white dark:bg-stone-900 border border-emerald-500/30 rounded-3xl p-8 text-center flex flex-col items-center justify-center min-h-[400px] shadow-sm">
         <div className="text-emerald-500 mb-4 animate-bounce-slow">
           <CheckCircle2 size={56} />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-2">¡Solicitud recibida con éxito!</h3>
-        <p className="text-slate-400 text-sm max-w-sm mb-6 leading-relaxed">
+        <h3 className="text-xl font-bold text-stone-900 dark:text-white mb-2 font-playfair">¡Solicitud recibida!</h3>
+        <p className="text-stone-550 dark:text-stone-400 text-xs md:text-sm max-w-sm mb-6 leading-relaxed">
           Hemos procesado tus datos de contacto y te estamos redirigiendo a WhatsApp para enviarme los detalles del presupuesto.
         </p>
         <button
           onClick={() => setIsSuccess(false)}
-          className="text-xs text-indigo-400 hover:text-indigo-300 hover:underline"
+          className="text-xs font-bold text-[#8A4F35] dark:text-amber-500 hover:underline cursor-pointer"
         >
           ¿No fuiste redirigido? Hacé clic acá para enviar de nuevo.
         </button>
@@ -92,10 +92,10 @@ function ContactFormContent() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 bg-slate-900 border border-slate-800 p-6 md:p-8 rounded-2xl shadow-xl">
+    <form onSubmit={handleSubmit} className="space-y-4 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 p-6 md:p-8 rounded-3xl shadow-md">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="nombre" className="block text-xs font-semibold uppercase text-slate-400 tracking-wider mb-1.5">
+          <label htmlFor="nombre" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-400 tracking-wider mb-1.5 font-mono">
             Tu Nombre *
           </label>
           <input
@@ -106,11 +106,11 @@ function ContactFormContent() {
             value={formData.nombre}
             onChange={handleChange}
             placeholder="Ej: Sofía"
-            className="w-full bg-slate-950 border border-slate-800 focus:border-indigo-500 rounded-xl px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 outline-none transition"
+            className="w-full bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-800 focus:border-[#8A4F35] dark:focus:border-amber-500 rounded-xl px-4 py-2.5 text-xs md:text-sm text-stone-900 dark:text-stone-100 placeholder-stone-400 dark:placeholder-stone-600 outline-none transition"
           />
         </div>
         <div>
-          <label htmlFor="emprendimiento" className="block text-xs font-semibold uppercase text-slate-400 tracking-wider mb-1.5">
+          <label htmlFor="emprendimiento" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-400 tracking-wider mb-1.5 font-mono">
             Nombre del Emprendimiento
           </label>
           <input
@@ -120,14 +120,14 @@ function ContactFormContent() {
             value={formData.emprendimiento}
             onChange={handleChange}
             placeholder="Ej: Campus Cookies"
-            className="w-full bg-slate-950 border border-slate-800 focus:border-indigo-500 rounded-xl px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 outline-none transition"
+            className="w-full bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-800 focus:border-[#8A4F35] dark:focus:border-amber-500 rounded-xl px-4 py-2.5 text-xs md:text-sm text-stone-900 dark:text-stone-100 placeholder-stone-400 dark:placeholder-stone-600 outline-none transition"
           />
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="instagram" className="block text-xs font-semibold uppercase text-slate-400 tracking-wider mb-1.5">
+          <label htmlFor="instagram" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-400 tracking-wider mb-1.5 font-mono">
             Instagram del Emprendimiento
           </label>
           <input
@@ -137,11 +137,11 @@ function ContactFormContent() {
             value={formData.instagram}
             onChange={handleChange}
             placeholder="Ej: @campus.cookies"
-            className="w-full bg-slate-950 border border-slate-800 focus:border-indigo-500 rounded-xl px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 outline-none transition"
+            className="w-full bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-800 focus:border-[#8A4F35] dark:focus:border-amber-500 rounded-xl px-4 py-2.5 text-xs md:text-sm text-stone-900 dark:text-stone-100 placeholder-stone-400 dark:placeholder-stone-600 outline-none transition"
           />
         </div>
         <div>
-          <label htmlFor="rubro" className="block text-xs font-semibold uppercase text-slate-400 tracking-wider mb-1.5">
+          <label htmlFor="rubro" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-400 tracking-wider mb-1.5 font-mono">
             Rubro / Estilo de interés *
           </label>
           <select
@@ -149,9 +149,9 @@ function ContactFormContent() {
             name="rubro"
             value={formData.rubro}
             onChange={handleChange}
-            className="w-full bg-slate-950 border border-slate-800 focus:border-indigo-500 rounded-xl px-4 py-2.5 text-sm text-slate-300 outline-none transition cursor-pointer"
+            className="w-full bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-800 focus:border-[#8A4F35] dark:focus:border-amber-500 rounded-xl px-4 py-2.5 text-xs md:text-sm text-stone-800 dark:text-stone-300 outline-none transition cursor-pointer"
           >
-            <option value="comida">Gastronomía</option>
+            <option value="comida">Gastronomía / Pastelería</option>
             <option value="indumentaria">Ambos / Uniformes</option>
             <option value="accesorios">Accesorios / Joyería</option>
             <option value="personalizados">Impresión 3D</option>
@@ -161,7 +161,7 @@ function ContactFormContent() {
       </div>
 
       <div>
-        <label htmlFor="mensaje" className="block text-xs font-semibold uppercase text-slate-400 tracking-wider mb-1.5">
+        <label htmlFor="mensaje" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-400 tracking-wider mb-1.5 font-mono">
           Contame qué necesitás *
         </label>
         <textarea
@@ -171,15 +171,15 @@ function ContactFormContent() {
           required
           value={formData.mensaje}
           onChange={handleChange}
-          placeholder="Ej: Hola! Me gustaría hacer un catálogo de 20 productos de pastelería para la feria de Medicina. ¿Cuánto tardaría y qué costo tiene?"
-          className="w-full bg-slate-950 border border-slate-800 focus:border-indigo-500 rounded-xl px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 outline-none transition resize-none"
+          placeholder="Ej: Hola! Me gustaría hacer un catálogo de 20 productos para la feria de Medicina. ¿Cuánto tardaría?"
+          className="w-full bg-stone-50 dark:bg-stone-950 border border-stone-200 dark:border-stone-800 focus:border-[#8A4F35] dark:focus:border-amber-500 rounded-xl px-4 py-2.5 text-xs md:text-sm text-stone-900 dark:text-stone-100 placeholder-stone-400 dark:placeholder-stone-600 outline-none transition resize-none"
         ></textarea>
       </div>
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 disabled:from-slate-800 disabled:to-slate-800 text-white font-bold py-3 px-4 rounded-xl shadow-lg transition duration-200 cursor-pointer disabled:cursor-not-allowed text-sm"
+        className="w-full flex items-center justify-center gap-2 bg-[#8A4F35] hover:bg-[#72402B] dark:bg-amber-600 dark:hover:bg-amber-550 disabled:bg-stone-200 dark:disabled:bg-stone-800 disabled:text-stone-400 text-white font-bold py-3 px-4 rounded-xl shadow-md shadow-amber-900/10 dark:shadow-none transition duration-200 cursor-pointer disabled:cursor-not-allowed text-sm"
       >
         {isSubmitting ? (
           <>
@@ -194,7 +194,7 @@ function ContactFormContent() {
         )}
       </button>
 
-      <div className="flex items-center gap-1.5 justify-center text-[10px] text-slate-500 pt-2">
+      <div className="flex items-center gap-1.5 justify-center text-[10px] text-stone-550 dark:text-stone-500 pt-2">
         <MessageSquare size={12} />
         <span>Se abrirá una conversación segura de WhatsApp con {OWNER_CONFIG.OWNER_NAME}.</span>
       </div>
@@ -206,8 +206,8 @@ function ContactFormContent() {
 export default function ContactForm() {
   return (
     <Suspense fallback={
-      <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl h-80 flex items-center justify-center">
-        <Loader2 size={28} className="animate-spin text-slate-600" />
+      <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 p-8 rounded-3xl h-80 flex items-center justify-center">
+        <Loader2 size={28} className="animate-spin text-[#8A4F35] dark:text-amber-500" />
       </div>
     }>
       <ContactFormContent />
