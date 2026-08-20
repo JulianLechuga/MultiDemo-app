@@ -65,7 +65,7 @@ export default function PersonalizadosDemoPage() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/demo/personalizados" className={`font-bold text-lg md:text-xl tracking-wider text-cyan-400 ${brand.fontFamilyTitle} flex items-center gap-2`}>
             <Box size={20} className="animate-pulse text-cyan-400" />
-            <span>CORTEX 3D</span>
+            <span>{brand.name}</span>
           </Link>
           
           <button 

@@ -58,9 +58,9 @@ export default function IndumentariaDemoPage() {
       {/* Header */}
       <header className="border-b border-teal-900/10 bg-white/80 backdrop-blur-md sticky top-[45px] z-20">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/demo/indumentaria" className={`font-bold text-xl md:text-2xl ${brand.themeColor.textTitle} ${brand.fontFamilyTitle} tracking-tight flex items-center gap-1`}>
-            <span className="text-teal-600 font-extrabold">A</span>
-            <span>Aura Ambos</span>
+          <Link href="/demo/indumentaria" className={`font-bold text-xl md:text-2xl ${brand.themeColor.textTitle} ${brand.fontFamilyTitle} tracking-tight flex items-center gap-1.5`}>
+            <span className="text-teal-600 font-extrabold">🏥</span>
+            <span>{brand.name}</span>
           </Link>
           
           <div className="flex items-center gap-3">

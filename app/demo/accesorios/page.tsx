@@ -51,7 +51,7 @@ export default function AccesoriosDemoPage() {
       <header className="border-b border-stone-200 bg-white/70 backdrop-blur-md sticky top-[45px] z-20">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/demo/accesorios" className={`font-bold text-xl tracking-widest uppercase ${brand.themeColor.textTitle} ${brand.fontFamilyTitle}`}>
-            Lumina
+            {brand.name}
           </Link>
           
           <button 

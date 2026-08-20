@@ -63,7 +63,7 @@ export default function ProductClient({ id }: ProductClientProps) {
       <header className="border-b border-teal-900/10 bg-white/80 backdrop-blur-md sticky top-[45px] z-20">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/demo/indumentaria" className={`font-bold text-xl ${brand.themeColor.textTitle} ${brand.fontFamilyTitle}`}>
-            Aura Ambos
+            🏥 {brand.name}
           </Link>
           <button 
             onClick={handleConsultSubmit}

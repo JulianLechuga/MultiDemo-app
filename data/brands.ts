@@ -3,6 +3,9 @@
  * 
  * Este archivo define la identidad, descripción, contactos ficticios,
  * y tokens de diseño para cada una de las 4 demos independientes.
+ * 
+ * Se han simplificado los nombres de marca para reflejar únicamente su rubro,
+ * demostrando cómo se adaptan las estructuras a cada categoría comercial.
  */
 
 export interface BrandConfig {
@@ -28,11 +31,11 @@ export interface BrandConfig {
 export const BRANDS: Record<string, BrandConfig> = {
   comida: {
     id: "comida",
-    name: "Dolce Campus",
+    name: "Gastronomía",
     category: "Pastelería & Cookies",
-    description: "Cookies artesanales, alfajores y rolls recién horneados. Ideal para tus recreos o para compartir en el campus.",
+    description: "Cookies artesanales, alfajores y rolls recién horneados. Estructura adaptada para locales gastronómicos, pastelerías y cafeterías de especialidad.",
     fictiveWhatsapp: "5491199991111", // Simulado
-    fictiveInstagram: "@dolce.campus",
+    fictiveInstagram: "@tu.emprendimiento",
     location: "Feria de Medicina, Facultad de Medicina UBA",
     fontFamilyTitle: "font-playfair",
     fontFamilyBody: "font-quicksand",
@@ -47,11 +50,11 @@ export const BRANDS: Record<string, BrandConfig> = {
   },
   indumentaria: {
     id: "indumentaria",
-    name: "Aura Ambos",
+    name: "Ambos",
     category: "Indumentaria de Salud",
-    description: "Diseñamos guardapolvos, chaquetas y ambos médicos que combinan comodidad, resistencia y estilo moderno.",
+    description: "Catálogo estructurado para guardapolvos, chaquetas y uniformes de salud. Enfoque limpio y profesional con filtros de talles y géneros.",
     fictiveWhatsapp: "5491199992222", // Simulado
-    fictiveInstagram: "@aura.ambos",
+    fictiveInstagram: "@tu.marca.ambos",
     location: "Buenos Aires (Envíos a todo el país)",
     fontFamilyTitle: "font-jakarta",
     fontFamilyBody: "font-inter",
@@ -66,11 +69,11 @@ export const BRANDS: Record<string, BrandConfig> = {
   },
   accesorios: {
     id: "accesorios",
-    name: "Lumina Joyas",
-    category: "Joyería & Accesorios",
-    description: "Accesorios minimalistas y piezas de joyería fina pensadas para complementar tu día a día con sutileza y elegancia.",
+    name: "Accesorios",
+    category: "Joyería & Diseño",
+    description: "Estética boutique minimalista ideal para joyas, anillos, pulseras y stickers de diseño. Diseño limpio que resalta los detalles del producto.",
     fictiveWhatsapp: "5491199993333", // Simulado
-    fictiveInstagram: "@lumina.joyas",
+    fictiveInstagram: "@tus.accesorios",
     location: "Showroom en Palermo & Stands de Diseño",
     fontFamilyTitle: "font-cormorant",
     fontFamilyBody: "font-montserrat",
@@ -85,11 +88,11 @@ export const BRANDS: Record<string, BrandConfig> = {
   },
   personalizados: {
     id: "personalizados",
-    name: "Cortex 3D",
-    category: "Impresión 3D & Anatomía",
-    description: "Modelos anatómicos de alta fidelidad para estudiantes de medicina, piezas educativas, llaveros y proyectos a pedido.",
+    name: "Impresión 3D",
+    category: "Modelos & Prototipos",
+    description: "Página técnica diseñada para la venta de modelos anatómicos, llaveros y cotizador integrado para archivos .STL a pedido.",
     fictiveWhatsapp: "5491199994444", // Simulado
-    fictiveInstagram: "@cortex.3d",
+    fictiveInstagram: "@tu.impresion3d",
     location: "Envíos directos a Facultades y Hospitales de CABA",
     fontFamilyTitle: "font-space-grotesk",
     fontFamilyBody: "font-mono",

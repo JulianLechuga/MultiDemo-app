@@ -151,10 +151,10 @@ function ContactFormContent() {
             onChange={handleChange}
             className="w-full bg-slate-950 border border-slate-800 focus:border-indigo-500 rounded-xl px-4 py-2.5 text-sm text-slate-300 outline-none transition cursor-pointer"
           >
-            <option value="comida">Gastronomía / Dolce Campus</option>
-            <option value="indumentaria">Indumentaria / Aura Ambos</option>
-            <option value="accesorios">Accesorios / Lumina Joyas</option>
-            <option value="personalizados">Impresión 3D / Cortex 3D</option>
+            <option value="comida">Gastronomía</option>
+            <option value="indumentaria">Ambos / Uniformes</option>
+            <option value="accesorios">Accesorios / Joyería</option>
+            <option value="personalizados">Impresión 3D</option>
             <option value="otro">Otro rubro personalizado</option>
           </select>
         </div>
