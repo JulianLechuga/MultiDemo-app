@@ -78,7 +78,7 @@ function ContactFormContent() {
           <CheckCircle2 size={56} />
         </div>
         <h3 className="text-xl font-bold text-stone-900 dark:text-white mb-2 font-playfair">¡Solicitud recibida!</h3>
-        <p className="text-stone-550 dark:text-stone-400 text-xs md:text-sm max-w-sm mb-6 leading-relaxed">
+        <p className="text-stone-550 dark:text-stone-300 text-xs md:text-sm max-w-sm mb-6 leading-relaxed">
           Hemos procesado tus datos de contacto y te estamos redirigiendo a WhatsApp para enviarme los detalles del presupuesto.
         </p>
         <button
@@ -95,7 +95,7 @@ function ContactFormContent() {
     <form onSubmit={handleSubmit} className="space-y-4 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 p-6 md:p-8 rounded-3xl shadow-md">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="nombre" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-400 tracking-wider mb-1.5 font-mono">
+          <label htmlFor="nombre" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-300 tracking-wider mb-1.5 font-mono">
             Tu Nombre *
           </label>
           <input
@@ -110,7 +110,7 @@ function ContactFormContent() {
           />
         </div>
         <div>
-          <label htmlFor="emprendimiento" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-400 tracking-wider mb-1.5 font-mono">
+          <label htmlFor="emprendimiento" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-300 tracking-wider mb-1.5 font-mono">
             Nombre del Emprendimiento
           </label>
           <input
@@ -127,7 +127,7 @@ function ContactFormContent() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="instagram" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-400 tracking-wider mb-1.5 font-mono">
+          <label htmlFor="instagram" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-300 tracking-wider mb-1.5 font-mono">
             Instagram del Emprendimiento
           </label>
           <input
@@ -141,7 +141,7 @@ function ContactFormContent() {
           />
         </div>
         <div>
-          <label htmlFor="rubro" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-400 tracking-wider mb-1.5 font-mono">
+          <label htmlFor="rubro" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-300 tracking-wider mb-1.5 font-mono">
             Rubro / Estilo de interés *
           </label>
           <select
@@ -161,7 +161,7 @@ function ContactFormContent() {
       </div>
 
       <div>
-        <label htmlFor="mensaje" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-400 tracking-wider mb-1.5 font-mono">
+        <label htmlFor="mensaje" className="block text-[10px] font-bold uppercase text-stone-500 dark:text-stone-300 tracking-wider mb-1.5 font-mono">
           Contame qué necesitás *
         </label>
         <textarea
@@ -194,7 +194,7 @@ function ContactFormContent() {
         )}
       </button>
 
-      <div className="flex items-center gap-1.5 justify-center text-[10px] text-stone-550 dark:text-stone-500 pt-2">
+      <div className="flex items-center gap-1.5 justify-center text-[10px] text-stone-550 dark:text-stone-400 pt-2">
         <MessageSquare size={12} />
         <span>Se abrirá una conversación segura de WhatsApp con {OWNER_CONFIG.OWNER_NAME}.</span>
       </div>

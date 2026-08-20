@@ -104,7 +104,7 @@ export default function MainPage() {
             </div>
           </div>
 
-          <nav className="hidden md:flex items-center gap-7 text-xs uppercase tracking-wider font-extrabold text-stone-500 dark:text-stone-400">
+          <nav className="hidden md:flex items-center gap-7 text-xs uppercase tracking-wider font-extrabold text-stone-500 dark:text-stone-300">
             <button onClick={() => handleScrollTo("demos")} className="hover:text-stone-900 dark:hover:text-white transition cursor-pointer">Estilos Demo</button>
             <button onClick={() => handleScrollTo("beneficios")} className="hover:text-stone-900 dark:hover:text-white transition cursor-pointer">Qué Incluye</button>
             <button onClick={() => handleScrollTo("ferias")} className="hover:text-stone-900 dark:hover:text-white transition cursor-pointer">Stand QR</button>
@@ -149,7 +149,7 @@ export default function MainPage() {
               </span>
             </h1>
             
-            <p className="text-stone-550 dark:text-stone-400 text-base md:text-lg leading-relaxed max-w-xl">
+            <p className="text-stone-550 dark:text-stone-300 text-base md:text-lg leading-relaxed max-w-xl">
               Diseño y desarrollo de catálogos interactivos que cierran pedidos de forma automática. Llevá visitas de Instagram directo a tu WhatsApp y mostrá tu catálogo en ferias mediante códigos QR personalizados.
             </p>
 
@@ -170,7 +170,7 @@ export default function MainPage() {
             </div>
 
             {/* Micro badges de validación */}
-            <div className="flex flex-wrap items-center gap-5 pt-5 text-xs text-stone-500 dark:text-stone-400 border-t border-stone-200/80 dark:border-stone-850">
+            <div className="flex flex-wrap items-center gap-5 pt-5 text-xs text-stone-500 dark:text-stone-300 border-t border-stone-200/80 dark:border-stone-850">
               <span className="flex items-center gap-1.5">
                 <Check size={15} className="text-emerald-600" /> Sin Comisiones por Venta
               </span>
@@ -246,7 +246,7 @@ export default function MainPage() {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold text-stone-900 dark:text-white tracking-tight">Catalogo QR Stand</h4>
-                  <p className="text-[10px] text-stone-500 dark:text-stone-400 font-medium">Escaneás en feria y pedís</p>
+                  <p className="text-[10px] text-stone-500 dark:text-stone-300 font-medium">Escaneás en feria y pedís</p>
                 </div>
               </div>
             </div>
@@ -267,7 +267,7 @@ export default function MainPage() {
               <h2 className="text-3.5xl md:text-5xl font-playfair font-black text-stone-900 dark:text-white tracking-tight leading-tight">
                 Instagram + Web: El combo de conversión definitivo
               </h2>
-              <p className="text-stone-500 dark:text-stone-400 text-sm md:text-base leading-relaxed">
+              <p className="text-stone-500 dark:text-stone-300 text-sm md:text-base leading-relaxed">
                 Tener una página web no significa dejar de usar Instagram. Al contrario: <strong>se complementan mutuamente</strong>. Instagram es la vitrina visual ideal para captar atención e interactuar; tu página web es la herramienta técnica optimizada para concretar el pedido sin demoras ni chats infinitos preguntando precios.
               </p>
               
@@ -283,7 +283,7 @@ export default function MainPage() {
                     </div>
                     <div>
                       <h4 className="text-stone-900 dark:text-white font-bold text-sm md:text-base">{item.title}</h4>
-                      <p className="text-stone-500 dark:text-stone-400 text-xs md:text-sm mt-0.5 leading-relaxed">{item.desc}</p>
+                      <p className="text-stone-500 dark:text-stone-300 text-xs md:text-sm mt-0.5 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -304,7 +304,7 @@ export default function MainPage() {
                     <Instagram size={18} />
                   </div>
                   <span className="text-xs font-bold text-stone-950 dark:text-white">Instagram</span>
-                  <span className="text-[9px] text-stone-400 dark:text-stone-500 mt-1 leading-tight">El cliente ve tu contenido</span>
+                  <span className="text-[9px] text-stone-400 dark:text-stone-400 mt-1 leading-tight">El cliente ve tu contenido</span>
                 </div>
                 
                 <div className="text-stone-300 dark:text-stone-750 rotate-90 md:rotate-0 font-bold text-lg">➔</div>
@@ -314,7 +314,7 @@ export default function MainPage() {
                   <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-[#8A4F35] text-white text-[7px] font-bold px-2 py-0.5 rounded-full">TU WEB</span>
                   <Smartphone size={24} className="text-[#8A4F35] mb-2" />
                   <span className="text-xs font-bold text-stone-950 dark:text-white">Catálogo Web</span>
-                  <span className="text-[9px] text-stone-500 dark:text-stone-450 mt-1 leading-tight">Consulta precios y stock</span>
+                  <span className="text-[9px] text-stone-500 dark:text-stone-300 mt-1 leading-tight">Consulta precios y stock</span>
                 </div>
 
                 <div className="text-stone-300 dark:text-stone-750 rotate-90 md:rotate-0 font-bold text-lg">➔</div>
@@ -328,7 +328,7 @@ export default function MainPage() {
               </div>
 
               <div className="mt-8 bg-white dark:bg-stone-950 p-4.5 rounded-2xl text-center border border-stone-200 dark:border-stone-850 text-xs transition-colors">
-                <span className="text-stone-500 dark:text-stone-400">
+                <span className="text-stone-500 dark:text-stone-300">
                   💡 <strong>Ahorro de Tiempo:</strong> Al auto-atenderse los clientes en la web, vos solo respondés para coordinar el cobro y la entrega final.
                 </span>
               </div>
@@ -347,7 +347,7 @@ export default function MainPage() {
             <h2 className="text-3xl md:text-4xl font-playfair font-black text-stone-900 tracking-tight leading-tight">
               Actualizá precios y stock vos mismo en un minuto
             </h2>
-            <p className="text-stone-550 dark:text-stone-400 text-sm md:text-base leading-relaxed">
+            <p className="text-stone-550 dark:text-stone-300 text-sm md:text-base leading-relaxed">
               No necesitás pagar abonos de plataformas complejas ni saber programar. Te configuramos un archivo de datos para que cambiar un precio o pausar temporalmente un producto sin stock sea tan simple como editar un mensaje de texto.
             </p>
             <div className="flex items-center gap-3 text-xs text-[#8A4F35] font-extrabold pt-2">
@@ -416,7 +416,7 @@ export default function MainPage() {
                   <QrCode size={24} />
                 </div>
                 <h3 className="text-2xl font-playfair font-black text-stone-900 dark:text-white mb-4 tracking-tight">El puesto inteligente</h3>
-                <p className="text-stone-500 dark:text-stone-400 text-sm md:text-base leading-relaxed mb-6">
+                <p className="text-stone-500 dark:text-stone-300 text-sm md:text-base leading-relaxed mb-6">
                   Colocás un cartel con un código QR en tu mesa de feria. El cliente escanea el código y accede al catálogo de inmediato en su celular. Esto le permite ver la lista completa de variedades, consultar talles y precios, y reservar su pedido en el acto.
                 </p>
               </div>
@@ -445,19 +445,12 @@ export default function MainPage() {
               <div className="w-full max-w-md relative z-10 space-y-6">
                 <div className="bg-white dark:bg-stone-950 p-5 rounded-2xl border border-stone-200 dark:border-stone-850 flex items-center justify-between shadow-sm transition-colors">
                   <div className="flex items-center gap-2.5">
-            <button
-              onClick={toggleDarkMode}
-              className="p-2.5 rounded-xl border border-stone-200 dark:border-stone-850 hover:bg-stone-50 dark:hover:bg-stone-900 text-stone-600 dark:text-stone-300 transition duration-200 cursor-pointer"
-              title={darkMode ? "Modo Claro" : "Modo Oscuro"}
-            >
-              {darkMode ? <Sun size={16} /> : <Moon size={16} />}
-            </button>
                     <div className="w-10 h-10 bg-stone-50 dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 flex items-center justify-center text-[#8A4F35]">
                       <QrCode size={20} />
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-stone-900 dark:text-white">1. QR en el Stand</h4>
-                      <p className="text-[9px] text-stone-400 dark:text-stone-500 font-mono">Folleto o cartel de acrílico impreso</p>
+                      <p className="text-[9px] text-stone-400 dark:text-stone-400 font-mono">Folleto o cartel de acrílico impreso</p>
                     </div>
                   </div>
                   <span className="text-[9px] bg-emerald-500/10 text-emerald-800 px-2 py-0.5 rounded border border-emerald-500/25 font-bold uppercase">Escaneo</span>
@@ -472,7 +465,7 @@ export default function MainPage() {
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-stone-900 dark:text-white">2. Catálogo Interactivo</h4>
-                      <p className="text-[9px] text-stone-400 dark:text-stone-500 font-mono">El cliente recorre tu stock</p>
+                      <p className="text-[9px] text-stone-400 dark:text-stone-400 font-mono">El cliente recorre tu stock</p>
                     </div>
                   </div>
                   <span className="text-[9px] bg-amber-500/10 text-amber-800 px-2 py-0.5 rounded border border-amber-500/25 font-bold uppercase">Navegación</span>
@@ -487,7 +480,7 @@ export default function MainPage() {
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-stone-900 dark:text-white">3. Consulta a WhatsApp</h4>
-                      <p className="text-[9px] text-stone-400 dark:text-stone-500 font-mono">Pedido listo en tu chat</p>
+                      <p className="text-[9px] text-stone-400 dark:text-stone-400 font-mono">Pedido listo en tu chat</p>
                     </div>
                   </div>
                   <span className="text-[9px] bg-emerald-500/10 text-emerald-800 px-2 py-0.5 rounded border border-emerald-500/25 font-bold uppercase">Cierre</span>
@@ -530,7 +523,7 @@ export default function MainPage() {
                     <Icon size={20} />
                   </div>
                   <h4 className="text-stone-900 dark:text-white font-bold text-sm md:text-base mb-2 font-playfair">{benefit.title}</h4>
-                  <p className="text-stone-500 dark:text-stone-400 text-xs md:text-sm leading-relaxed">{benefit.text}</p>
+                  <p className="text-stone-500 dark:text-stone-300 text-xs md:text-sm leading-relaxed">{benefit.text}</p>
                 </div>
               );
             })}
@@ -564,7 +557,7 @@ export default function MainPage() {
                 <div>
                   <span className="text-xs font-bold text-[#8A4F35] tracking-wider uppercase font-mono">{item.step}</span>
                   <h3 className="text-lg md:text-xl font-bold text-stone-900 dark:text-white mt-1 mb-2 font-playfair">{item.title}</h3>
-                  <p className="text-stone-500 dark:text-stone-400 text-xs md:text-sm leading-relaxed">{item.text}</p>
+                  <p className="text-stone-500 dark:text-stone-300 text-xs md:text-sm leading-relaxed">{item.text}</p>
                 </div>
               </div>
             ))}
@@ -596,19 +589,19 @@ export default function MainPage() {
                 }`}
               >
                 {plan.recommended && (
-                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#8A4F35] text-white text-[10px] uppercase font-extrabold tracking-widest px-4 py-1.5 rounded-full shadow-md">
-                    El más elegido animate-pulse animate-pulse
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#8A4F35] text-white text-[10px] uppercase font-extrabold tracking-widest px-4 py-1.5 rounded-full shadow-md animate-pulse">
+                    El más elegido
                   </span>
                 )}
 
                 <div>
                   <h3 className="text-lg font-bold text-stone-900 dark:text-white mb-2 font-playfair">{plan.name}</h3>
-                  <p className="text-stone-500 dark:text-stone-400 text-xs mb-5 leading-relaxed min-h-[48px]">{plan.description}</p>
+                  <p className="text-stone-500 dark:text-stone-300 text-xs mb-5 leading-relaxed min-h-[48px]">{plan.description}</p>
                   
                   {/* Puesta en marcha y abono */}
                   <div className="space-y-2 mb-5.5 bg-stone-50/50 dark:bg-stone-900/30 p-3 rounded-xl border border-stone-100 dark:border-stone-850">
                     <div>
-                      <span className="text-[9px] text-stone-400 dark:text-stone-500 block font-mono uppercase tracking-wider">Puesta en marcha</span>
+                      <span className="text-[9px] text-stone-400 dark:text-stone-400 block font-mono uppercase tracking-wider">Puesta en marcha</span>
                       <span className="text-base font-extrabold text-stone-800 dark:text-stone-200 font-mono">{plan.setupPrice}</span>
                     </div>
                     <div>
@@ -621,7 +614,7 @@ export default function MainPage() {
 
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2 text-[11px] text-stone-600 dark:text-stone-450 leading-snug">
+                      <li key={fIdx} className="flex items-start gap-2 text-[11px] text-stone-600 dark:text-stone-300 leading-snug">
                         <Check size={14} className="text-[#8A4F35] dark:text-amber-550 flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
@@ -657,7 +650,7 @@ export default function MainPage() {
             <h3 className="text-base font-bold text-stone-900 dark:text-white mb-6 font-playfair text-center">Resumen de Planes y Tarifas</h3>
             <table className="w-full text-left text-xs md:text-sm border-collapse">
               <thead>
-                <tr className="border-b border-stone-250/60 dark:border-stone-800 text-stone-500 dark:text-stone-400 font-mono text-[9px] uppercase tracking-wider">
+                <tr className="border-b border-stone-250/60 dark:border-stone-800 text-stone-500 dark:text-stone-300 font-mono text-[9px] uppercase tracking-wider">
                   <th className="py-3 px-4 font-bold">Plan</th>
                   <th className="py-3 px-4 text-right font-bold">Puesta en marcha</th>
                   <th className="py-3 px-4 text-right font-bold">Mensual</th>
@@ -669,13 +662,13 @@ export default function MainPage() {
                   <td className="py-4 px-4 font-bold text-stone-900 dark:text-white">Express</td>
                   <td className="py-4 px-4 text-right font-mono">$60.000 – $90.000</td>
                   <td className="py-4 px-4 text-right font-mono">$5.000 – $8.000</td>
-                  <td className="py-4 px-4 text-xs text-stone-550 dark:text-stone-400 leading-relaxed">Landing simple, WhatsApp, Instagram, datos del emprendimiento, productos destacados.</td>
+                  <td className="py-4 px-4 text-xs text-stone-550 dark:text-stone-300 leading-relaxed">Landing simple, WhatsApp, Instagram, datos del emprendimiento, productos destacados.</td>
                 </tr>
                 <tr className="hover:bg-stone-50/50 dark:hover:bg-stone-850/50 transition-colors">
                   <td className="py-4 px-4 font-bold text-stone-900 dark:text-white">Catálogo</td>
                   <td className="py-4 px-4 text-right font-mono">$110.000 – $160.000</td>
                   <td className="py-4 px-4 text-right font-mono">$12.000 – $20.000</td>
-                  <td className="py-4 px-4 text-xs text-stone-550 dark:text-stone-400 leading-relaxed">Catálogo completo, categorías, productos, precios, disponibilidad; vos hacés los cambios.</td>
+                  <td className="py-4 px-4 text-xs text-stone-550 dark:text-stone-300 leading-relaxed">Catálogo completo, categorías, productos, precios, disponibilidad; vos hacés los cambios.</td>
                 </tr>
                 <tr className="hover:bg-stone-50/50 bg-[#8A4F35]/5 dark:bg-[#8A4F35]/10 dark:hover:bg-[#8A4F35]/15 transition-colors">
                   <td className="py-4 px-4 font-bold text-[#8A4F35]">Catálogo Full</td>
@@ -687,7 +680,7 @@ export default function MainPage() {
                   <td className="py-4 px-4 font-bold text-stone-900 dark:text-white">E-commerce</td>
                   <td className="py-4 px-4 text-right font-mono">desde $350.000</td>
                   <td className="py-4 px-4 text-right font-mono">desde $30.000</td>
-                  <td className="py-4 px-4 text-xs text-stone-550 dark:text-stone-400 leading-relaxed">Carrito, pedidos, pagos, usuarios, integraciones.</td>
+                  <td className="py-4 px-4 text-xs text-stone-550 dark:text-stone-300 leading-relaxed">Carrito, pedidos, pagos, usuarios, integraciones.</td>
                 </tr>
               </tbody>
             </table>
@@ -706,7 +699,7 @@ export default function MainPage() {
                 <h2 className="text-3xl md:text-5xl font-playfair font-black text-stone-900 tracking-tight leading-tight">
                   Solicitá tu presupuesto
                 </h2>
-                <p className="text-stone-500 dark:text-stone-400 text-sm md:text-base leading-relaxed">
+                <p className="text-stone-500 dark:text-stone-300 text-sm md:text-base leading-relaxed">
                   Completá el formulario con los datos de tu emprendimiento en un minuto. Te responderé por WhatsApp para coordinar el diseño de tu catálogo y el stock inicial.
                 </p>
               </div>

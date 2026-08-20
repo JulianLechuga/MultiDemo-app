@@ -248,7 +248,7 @@ export default function VisualSelector() {
           <h2 className="text-4xl md:text-5xl font-playfair font-black text-stone-900 dark:text-white tracking-tight leading-tight">
             Elegí el estilo ideal para tu rubro
           </h2>
-          <p className="text-stone-500 dark:text-stone-400 text-base md:text-lg font-sans leading-relaxed">
+          <p className="text-stone-500 dark:text-stone-300 text-base md:text-lg font-sans leading-relaxed">
             Hacé clic en los botones para alternar entre las diferentes plantillas. Cada demo es totalmente funcional, adaptable a celulares y optimizada para el mercado argentino.
           </p>
         </div>
@@ -295,7 +295,7 @@ export default function VisualSelector() {
               {activeDetails.title}
             </h3>
 
-            <p className="text-stone-500 dark:text-stone-400 text-sm md:text-base leading-relaxed">
+            <p className="text-stone-500 dark:text-stone-300 text-sm md:text-base leading-relaxed">
               {activeDetails.description}
             </p>
 
@@ -304,7 +304,7 @@ export default function VisualSelector() {
               <h4 className="text-stone-855 dark:text-stone-200 font-bold text-xs uppercase tracking-wider mb-4">Detalles destacados de la plantilla:</h4>
               <ul className="space-y-3.5">
                 {activeDetails.highlights.map((highlight, index) => (
-                  <li key={index} className="flex items-start gap-3 text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-normal">
+                  <li key={index} className="flex items-start gap-3 text-xs md:text-sm text-stone-600 dark:text-stone-300 leading-normal">
                     <Check size={18} className="text-emerald-600 flex-shrink-0 mt-0.5" />
                     <span>{highlight}</span>
                   </li>
@@ -313,13 +313,13 @@ export default function VisualSelector() {
             </div>
 
             {/* Ficha de Diseño de la Demo */}
-            <div className="flex flex-wrap items-center gap-6 text-xs text-stone-500 dark:text-stone-400 pt-2">
+            <div className="flex flex-wrap items-center gap-6 text-xs text-stone-500 dark:text-stone-300 pt-2">
               <div>
-                <span className="text-stone-400 dark:text-stone-500 block font-mono text-[9px] uppercase tracking-wider mb-1">Tipografía Base</span>
+                <span className="text-stone-400 dark:text-stone-400 block font-mono text-[9px] uppercase tracking-wider mb-1">Tipografía Base</span>
                 <span className="font-bold text-stone-700 dark:text-stone-300">{activeDetails.typography}</span>
               </div>
               <div>
-                <span className="text-stone-400 dark:text-stone-500 block font-mono text-[9px] uppercase tracking-wider mb-1">Paleta de Colores</span>
+                <span className="text-stone-400 dark:text-stone-400 block font-mono text-[9px] uppercase tracking-wider mb-1">Paleta de Colores</span>
                 <div className="flex gap-1.5 mt-0.5">
                   {activeDetails.colors.map((c, i) => (
                     <span key={i} className="w-4 h-4 rounded-full border border-stone-200 dark:border-stone-850 block" style={{ backgroundColor: c }} title={c}></span>

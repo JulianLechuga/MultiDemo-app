@@ -2,6 +2,10 @@
 
 @variant dark (&:where(.dark, .dark *));
 
+html {
+  font-size: 16.5px;
+}
+
 @theme {
   --font-outfit: var(--font-outfit), sans-serif;
   --font-inter: var(--font-inter), sans-serif;
