@@ -12,7 +12,22 @@
   --font-mono: var(--font-jetbrains-mono), monospace;
 }
 
-/* Efectos de Glassmorphism Premium */
+/* Panel de Vidrio Cálido Editorial */
+.warm-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(180, 83, 9, 0.08);
+}
+
+.editorial-shadow {
+  box-shadow: 0 10px 40px -15px rgba(44, 37, 32, 0.05);
+}
+
+.editorial-shadow-lg {
+  box-shadow: 0 20px 50px -12px rgba(44, 37, 32, 0.08);
+}
+
+/* Efectos de Glassmorphism Premium Oscuro (para la demo 3D) */
 .glass-panel {
   background: rgba(15, 23, 42, 0.65);
   backdrop-filter: blur(12px);
@@ -25,15 +40,31 @@
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.glass-card-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Animación de Flotado Natural */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
-.glass-card-hover:hover {
-  transform: translateY(-4px);
-  background: rgba(30, 41, 59, 0.8);
-  border-color: rgba(99, 102, 241, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.2);
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
 }
 
 /* Grid de fondo tipo plano técnico para la demo 3D e ingeniería */
@@ -44,20 +75,21 @@
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
-/* Scrollbar personalizado y suave */
+/* Scrollbar personalizado y suave (Neutro/Cálido) */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #FAF8F5; /* Fondo crema cálido */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #E6DFD5; /* Color piedra suave */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #C4B9AA;
 }
