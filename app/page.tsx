@@ -455,7 +455,7 @@ export default function MainPage() {
                       <p className="text-[9px] text-stone-400 dark:text-stone-400 font-mono">Folleto o cartel de acrílico impreso</p>
                     </div>
                   </div>
-                  <span className="text-[9px] bg-emerald-500/10 text-emerald-800 px-2 py-0.5 rounded border border-emerald-500/25 font-bold uppercase">Escaneo</span>
+                  <span className="text-[9px] bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-450 px-2 py-0.5 rounded border border-emerald-500/25 font-bold uppercase">Escaneo</span>
                 </div>
 
                 <div className="w-0.5 h-6 bg-[#8A4F35]/40 dark:bg-amber-500/30 mx-auto"></div>
@@ -470,22 +470,22 @@ export default function MainPage() {
                       <p className="text-[9px] text-stone-400 dark:text-stone-400 font-mono">El cliente recorre tu stock</p>
                     </div>
                   </div>
-                  <span className="text-[9px] bg-amber-500/10 text-amber-800 px-2 py-0.5 rounded border border-amber-500/25 font-bold uppercase">Navegación</span>
+                  <span className="text-[9px] bg-amber-500/10 dark:bg-amber-500/20 text-amber-800 dark:text-amber-400 px-2 py-0.5 rounded border border-amber-500/25 font-bold uppercase">Navegación</span>
                 </div>
 
                 <div className="w-0.5 h-6 bg-[#8A4F35]/40 dark:bg-amber-500/30 mx-auto"></div>
 
-                <div className="bg-white p-5 rounded-2xl border border-stone-200 flex items-center justify-between shadow-sm">
+                <div className="bg-white dark:bg-stone-950 p-5 rounded-2xl border border-stone-200 dark:border-stone-850 flex items-center justify-between shadow-sm transition-colors">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-stone-50 dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 flex items-center justify-center text-emerald-600">
                       <MessageSquare size={20} />
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-stone-900 dark:text-white">3. Consulta a WhatsApp</h4>
-                      <p className="text-[9px] text-stone-400 dark:text-stone-400 font-mono">Pedido listo en tu chat</p>
+                      <p className="text-[9px] text-stone-400 dark:text-stone-300 font-mono">Pedido listo en tu chat</p>
                     </div>
                   </div>
-                  <span className="text-[9px] bg-emerald-500/10 text-emerald-800 px-2 py-0.5 rounded border border-emerald-500/25 font-bold uppercase">Cierre</span>
+                  <span className="text-[9px] bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-450 px-2 py-0.5 rounded border border-emerald-500/25 font-bold uppercase">Cierre</span>
                 </div>
               </div>
             </div>
