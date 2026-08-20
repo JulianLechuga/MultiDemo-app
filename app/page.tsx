@@ -117,6 +117,7 @@ export default function MainPage() {
               onClick={toggleDarkMode}
               className="p-2.5 rounded-xl border border-stone-200 dark:border-stone-850 hover:bg-stone-50 dark:hover:bg-stone-900 text-stone-600 dark:text-stone-300 transition duration-200 cursor-pointer"
               title={darkMode ? "Modo Claro" : "Modo Oscuro"}
+              aria-label={darkMode ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
             >
               {darkMode ? <Sun size={16} /> : <Moon size={16} />}
             </button>
@@ -130,6 +131,7 @@ export default function MainPage() {
         </div>
       </header>
 
+      <main>
       {/* 2. HERO SECTION CON ESTILO CÁLIDO Y PROFESIONAL */}
       <section className="relative pt-20 pb-24 md:pt-32 md:pb-36 border-b border-stone-200/60 dark:border-stone-900 bg-[radial-gradient(ellipse_60%_60%_at_50%_-10%,rgba(138,79,53,0.06),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_60%_60%_at_50%_-10%,rgba(138,79,53,0.15),rgba(0,0,0,0))]">
         {/* Líneas tenues decorativas de diseño editorial */}
@@ -648,39 +650,54 @@ export default function MainPage() {
           {/* Tabla Comparativa de Tarifas */}
           <div className="mt-16 overflow-x-auto max-w-5xl mx-auto bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-850 rounded-3xl p-6 md:p-8 shadow-sm transition-colors">
             <h3 className="text-base font-bold text-stone-900 dark:text-white mb-6 font-playfair text-center">Resumen de Planes y Tarifas</h3>
-            <table className="w-full text-left text-xs md:text-sm border-collapse">
+            <table className="w-full text-left text-xs md:text-sm border-collapse min-w-[800px]">
               <thead>
                 <tr className="border-b border-stone-250/60 dark:border-stone-800 text-stone-500 dark:text-stone-200 font-mono text-[9px] uppercase tracking-wider">
                   <th className="py-3 px-4 font-bold">Plan</th>
                   <th className="py-3 px-4 text-right font-bold">Puesta en marcha</th>
                   <th className="py-3 px-4 text-right font-bold">Mensual</th>
-                  <th className="py-3 px-4 font-bold">Qué incluye</th>
+                  <th className="py-3 px-4 text-center font-bold">Panel Admin</th>
+                  <th className="py-3 px-4 text-center font-bold">Pasarela Pagos</th>
+                  <th className="py-3 px-4 text-center font-bold">Hosting / Dominio</th>
+                  <th className="py-3 px-4 font-bold">Ideal para</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-stone-100 dark:divide-stone-800 text-stone-600 dark:text-stone-350">
                 <tr className="hover:bg-stone-50/50 dark:hover:bg-stone-850/50 transition-colors">
                   <td className="py-4 px-4 font-bold text-stone-900 dark:text-white">Express</td>
-                  <td className="py-4 px-4 text-right font-mono">$60.000 – $90.000</td>
-                  <td className="py-4 px-4 text-right font-mono">$5.000 – $8.000</td>
-                  <td className="py-4 px-4 text-xs text-stone-550 dark:text-stone-300 leading-relaxed">Landing simple, WhatsApp, Instagram, datos del emprendimiento, productos destacados.</td>
+                  <td className="py-4 px-4 text-right font-mono text-stone-800 dark:text-stone-100 font-medium">$60.000 – $90.000</td>
+                  <td className="py-4 px-4 text-right font-mono text-stone-800 dark:text-stone-100 font-medium">$5.000 – $8.000</td>
+                  <td className="py-4 px-4 text-center text-stone-400 dark:text-stone-500 font-medium">❌ No (Código estático)</td>
+                  <td className="py-4 px-4 text-center text-stone-400 dark:text-stone-500 font-medium">❌ No</td>
+                  <td className="py-4 px-4 text-center text-emerald-600 dark:text-emerald-400 font-medium">✅ Bonificado (1er año)</td>
+                  <td className="py-4 px-4 text-xs text-stone-500 dark:text-stone-300 leading-relaxed">Stands de feria y muestras rápidas.</td>
                 </tr>
                 <tr className="hover:bg-stone-50/50 dark:hover:bg-stone-850/50 transition-colors">
                   <td className="py-4 px-4 font-bold text-stone-900 dark:text-white">Catálogo</td>
-                  <td className="py-4 px-4 text-right font-mono">$110.000 – $160.000</td>
-                  <td className="py-4 px-4 text-right font-mono">$12.000 – $20.000</td>
-                  <td className="py-4 px-4 text-xs text-stone-550 dark:text-stone-300 leading-relaxed">Catálogo completo, categorías, productos, precios, disponibilidad; vos hacés los cambios.</td>
+                  <td className="py-4 px-4 text-right font-mono text-stone-800 dark:text-stone-100 font-medium">$110.000 – $160.000</td>
+                  <td className="py-4 px-4 text-right font-mono text-stone-800 dark:text-stone-100 font-medium">$12.000 – $20.000</td>
+                  <td className="py-4 px-4 text-center text-stone-400 dark:text-stone-500 font-medium">❌ No (Edición simple)</td>
+                  <td className="py-4 px-4 text-center text-stone-400 dark:text-stone-500 font-medium">❌ No</td>
+                  <td className="py-4 px-4 text-center text-emerald-600 dark:text-emerald-400 font-medium">✅ Bonificado (1er año)</td>
+                  <td className="py-4 px-4 text-xs text-stone-550 dark:text-stone-300 leading-relaxed">Catálogos fijos de productos regulares.</td>
                 </tr>
-                <tr className="hover:bg-stone-50/50 bg-[#8A4F35]/5 dark:bg-amber-500/10 dark:hover:bg-amber-950/30 transition-colors">
-                  <td className="py-4 px-4 font-bold text-[#8A4F35] dark:text-amber-400">Catálogo Full</td>
+                <tr className="hover:bg-stone-50/50 bg-[#8A4F35]/5 dark:bg-amber-950/20 dark:border-amber-500/30 dark:hover:bg-amber-950/30 transition-colors">
+                  <td className="py-4 px-4 font-bold text-[#8A4F35] dark:text-amber-400">⭐ Catálogo Full</td>
                   <td className="py-4 px-4 text-right font-mono font-bold text-[#8A4F35] dark:text-amber-400">$190.000 – $280.000</td>
                   <td className="py-4 px-4 text-right font-mono font-bold text-[#8A4F35] dark:text-amber-400">$18.000 – $30.000</td>
-                  <td className="py-4 px-4 text-xs text-stone-700 dark:text-stone-250 leading-relaxed font-semibold">Panel admin, alta/edición de productos, precios, stock, destacados e imágenes.</td>
+                  <td className="py-4 px-4 text-center text-emerald-600 dark:text-emerald-400 font-extrabold">✅ Sí (Celular + PC)</td>
+                  <td className="py-4 px-4 text-center text-[#8A4F35] dark:text-amber-400 font-semibold">No (Cero Comisiones)</td>
+                  <td className="py-4 px-4 text-center text-emerald-600 dark:text-emerald-400 font-medium">✅ Bonificado (1er año)</td>
+                  <td className="py-4 px-4 text-xs text-amber-900 dark:text-amber-300 leading-relaxed font-bold">🔥 Emprendimientos activos con stock dinámico.</td>
                 </tr>
                 <tr className="hover:bg-stone-50/50 transition-colors">
                   <td className="py-4 px-4 font-bold text-stone-900 dark:text-white">E-commerce</td>
-                  <td className="py-4 px-4 text-right font-mono">desde $350.000</td>
-                  <td className="py-4 px-4 text-right font-mono">desde $30.000</td>
-                  <td className="py-4 px-4 text-xs text-stone-550 dark:text-stone-300 leading-relaxed">Carrito, pedidos, pagos, usuarios, integraciones.</td>
+                  <td className="py-4 px-4 text-right font-mono text-stone-800 dark:text-stone-100 font-medium">desde $350.000</td>
+                  <td className="py-4 px-4 text-right font-mono text-stone-800 dark:text-stone-100 font-medium">desde $30.000</td>
+                  <td className="py-4 px-4 text-center text-stone-700 dark:text-stone-300 font-medium">✅ Sí (Completo)</td>
+                  <td className="py-4 px-4 text-center text-emerald-600 dark:text-emerald-400 font-medium">✅ Sí (Mercado Pago)</td>
+                  <td className="py-4 px-4 text-center text-stone-400 dark:text-stone-500 font-medium">A cargo de cliente</td>
+                  <td className="py-4 px-4 text-xs text-stone-550 dark:text-stone-300 leading-relaxed">Tiendas de escala con cobros automatizados.</td>
                 </tr>
               </tbody>
             </table>
@@ -741,6 +758,8 @@ export default function MainPage() {
         </div>
       </section>
 
+      </main>
+
       {/* 11. FOOTER (ESTILO OSCURO EDITORIAL PARA CONTRASTE FINAL) */}
       <footer className="bg-stone-900 dark:bg-stone-950 text-stone-400 py-16 px-6 border-t border-stone-950 dark:border-stone-900 text-center md:text-left transition-colors">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs md:text-sm font-sans">
@@ -765,6 +784,7 @@ export default function MainPage() {
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-450 active:bg-emerald-600 text-white p-3.5 rounded-full shadow-[0_6px_25px_rgba(16,185,129,0.4)] border border-emerald-400/20 transition-all duration-300 hover:scale-105 flex items-center justify-center group"
         title="Consultar por WhatsApp"
+        aria-label="Enviar consulta por WhatsApp"
       >
         <MessageSquare size={24} className="animate-pulse" />
         <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 text-xs font-bold transition-all duration-300 uppercase tracking-widest whitespace-nowrap">

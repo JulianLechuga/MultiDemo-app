@@ -61,15 +61,16 @@ export const OWNER_CONFIG = {
       name: "Catálogo Full",
       setupPrice: "$190.000 – $280.000",
       monthlyPrice: "$18.000 – $30.000",
-      description: "Panel autoadministrable completo. Subí fotos, cambiá precios, destacá artículos y controlá el stock desde tu celular.",
+      description: "Panel autoadministrable completo. Subí fotos, cambiá precios, destacá artículos y controlá el stock desde tu celular. ¡Ahorrá horas de chat y automatizá tus pedidos!",
       features: [
         "Todo lo incluido en el plan Catálogo",
-        "Panel administrador privado protegido para tu negocio",
-        "Dashboard con métricas básicas (disponibles, agotados, destacados)",
-        "Crear, editar y eliminar productos mediante formularios simples",
-        "Cambio rápido de precios en un segundo y control de stock táctil",
-        "Gestión de imágenes locales o enlaces Supabase Storage",
-        "Soporte técnico prioritario por WhatsApp"
+        "Panel administrador privado protegido (¡acceso móvil rápido!)",
+        "Control total desde el celular: editá stock, precios y fotos en 5 segundos",
+        "Cero comisiones por venta: Cobros directos a tu alias o efectivo",
+        "Dashboard con métricas en tiempo real de tu stock y productos destacados",
+        "Infraestructura cloud autoadministrable (Supabase integrada)",
+        "Hosting y dominio bonificado durante el primer año",
+        "Soporte prioritario 1-a-1 por WhatsApp para cualquier duda"
       ],
       recommended: true
     },
